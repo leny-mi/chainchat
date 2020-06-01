@@ -1,4 +1,8 @@
-from distutils.core import setup
+from setuptools import setup
+import subprocess
+
+subprocess.call(["pip","install", "git+git://github.com/riccardoscalco/Pykov@master"])
+
 
 setup(
     name='chainchat',
@@ -8,9 +12,6 @@ setup(
     author_email='lenmisch@gmail.com',
     url='https://github.com/leny-mi/chainchat',
     py_modules=['chainchat'],
-    install_requires=['scipy', 'numpy', 'six', 'pykov'],
-    dependency_links=['http://git@github.com/riccardoscalco/Pykov/tarball/master#egg=pykov-1.1']
-    #'pykov @ git+git://git@github.com/riccardoscalco/Pykov@master#egg=pykov']
-
-    #https://github.com/riccardoscalco/Pykov
+    setup_requires=['wheel'],
+    install_requires=['scipy', 'numpy', 'six', 'pykov==1.1']
 )
