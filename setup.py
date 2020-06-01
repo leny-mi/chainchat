@@ -8,8 +8,8 @@ setup(
     author_email='lenmisch@gmail.com',
     url='https://github.com/leny-mi/chainchat',
     py_modules=['chainchat'],
-    install_requires=['scipy', 'numpy', 'six'],
-    dependency_links = [
-     "git+git://github.com/riccardoscalco/Pykov@master",
-    ],
+    install_requires=['scipy', 'numpy', 'six',
+    'pykov @ git+git://git@github.com/riccardoscalco/Pykov@v1.1#egg=pykov']
+
+    #https://github.com/riccardoscalco/Pykov
 )
